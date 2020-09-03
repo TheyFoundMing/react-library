@@ -1,14 +1,28 @@
 import React from "react";
+
+import Bookshelf from "./Bookshelf";
 import bookList from "../booksData";
 
-import Book from "./Book";
+import "../App.css";
 
 class BookshelfCont extends React.Component {
-  render() {
-    console.log(bookList);
-    const books = bookList.map((book) => <Book key={book.id} data={book} />);
+  constructor() {
+    super();
+    this.state = {
+      books: bookList,
+    };
 
-    return <div>{books}</div>;
+    this.toggleFinish = this.toggleFinish.bind(this);
+  }
+
+  toggleFinish(id) {
+    console.log(`I'm looking for book ${id}!`);
+  }
+
+  render() {
+    return (
+      <Bookshelf data={this.state.books} toggleFinish={this.toggleFinish} />
+    );
   }
 }
 
