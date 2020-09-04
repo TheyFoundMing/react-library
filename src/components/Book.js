@@ -2,10 +2,17 @@ import React from "react";
 
 import "../App.css";
 
+const finished = {
+  backgroundColor: "pink",
+};
+
 function Book(props) {
-  console.log(props);
   return (
-    <div className="cover" onClick={() => props.toggleFinish(props.data.id)}>
+    <div
+      className="cover"
+      onClick={() => props.toggleFinish(props.data.id)}
+      style={props.data.finished ? finished : null}
+    >
       <h2>{props.data.name}</h2>
       <div className="details">
         <span>{props.data.pages} pages</span>
