@@ -10,7 +10,6 @@ class Bookshelf extends React.Component {
   //   }
 
   render() {
-    console.log(this.props.data);
     const books = this.props.data.map((book) => (
       <Book key={book.id} data={book} toggleFinish={this.props.toggleFinish} />
     ));
