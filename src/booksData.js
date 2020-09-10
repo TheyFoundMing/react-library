@@ -1,6 +1,6 @@
 const books = [
   {
-    id: 1,
+    id: "NorwegiaWood",
     name: "Norwegia Wood",
     author: "Haruki Murakami",
     pages: "307",
@@ -8,7 +8,7 @@ const books = [
   },
 
   {
-    id: 2,
+    id: "Pinball",
     name: "Pinball",
     author: "Haruki Murakami",
     pages: "162",
@@ -16,7 +16,7 @@ const books = [
   },
 
   {
-    id: 3,
+    id: "HeartheWindSing",
     name: "Hear the Wind Sing",
     author: "Haruki Murakami",
     pages: "152",
@@ -24,7 +24,7 @@ const books = [
   },
 
   {
-    id: 4,
+    id: "1Q84",
     name: "1Q84",
     author: "Haruki Murakami",
     pages: "1157",

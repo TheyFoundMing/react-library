@@ -11,10 +11,23 @@
   height: 200px;
   border: 1px solid black;
   padding: 5px;
+  margin: 10px;
   text-align: center;
 }
 
 .details {
   display: flex;
   flex-direction: column;
+}
+
+.book-form {
+  display: grid;
+  width: 300px;
+  grid-template-columns: 200px;
+  height: 300px;
+}
+
+.library {
+  display: flex;
+  flex-direction: row;
 }

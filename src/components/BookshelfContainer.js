@@ -1,5 +1,6 @@
 import React from "react";
 
+import BookForm from "./BookForm";
 import Bookshelf from "./Bookshelf";
 import bookList from "../booksData";
 
@@ -13,6 +14,7 @@ class BookshelfCont extends React.Component {
     };
 
     this.toggleFinish = this.toggleFinish.bind(this);
+    this.addBook = this.addBook.bind(this);
   }
 
   toggleFinish(id) {
@@ -35,9 +37,22 @@ class BookshelfCont extends React.Component {
     });
   }
 
+  addBook(newBook) {
+    let prevList = this.state.books.slice(0, this.state.books.length);
+    prevList.push(newBook);
+    this.setState((prevState) => {
+      return {
+        books: prevList,
+      };
+    });
+  }
+
   render() {
     return (
-      <Bookshelf data={this.state.books} toggleFinish={this.toggleFinish} />
+      <div className="library">
+        <BookForm addBook={this.addBook} />
+        <Bookshelf data={this.state.books} toggleFinish={this.toggleFinish} />
+      </div>
     );
   }
 }
